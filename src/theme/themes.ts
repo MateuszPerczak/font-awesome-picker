@@ -9,13 +9,19 @@ type Themes = Record<ColorThemes, Theme>;
 
 const themes: Themes = {
   light: {
-    background: "#fff",
+    background: "#f1f1f1",
     color: "#000",
     category: "#ccc",
+    nav: "#fff",
+    combo: "#f1f1f1",
+    shadow: "#aaaaaaff",
+    hover: "#eaeaea",
+    border: "#aaa",
+    accent: "#0066aa",
+    active: "#eaeaea",
   },
   dark: {
     background: "#252525",
-    backgroundBlur: "#252525aa",
     color: "#fff",
     category: "#777",
     nav: "#1e1e1e",

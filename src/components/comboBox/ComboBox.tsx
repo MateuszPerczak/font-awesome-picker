@@ -25,9 +25,9 @@ const ComboBox: FC<ComboBoxProps> = ({ value, setValue, options }): JSX.Element 
         {isOpen && (
           <StyledComboBoxList
             initial={{ opacity: 0, height: 0 }}
-            animate={{ opacity: 1, height: 200 }}
+            animate={{ opacity: 1, height: 230 }}
             exit={{ opacity: 0, height: 0 }}
-            transition={{ type: "spring", mass: 0.2, stiffness: 180 }}
+            transition={{ type: "spring", mass: 0.2, stiffness: 150, damping: 12 }}
           >
             {options.map((option, index) => (
               <StyledComboBoxItem
