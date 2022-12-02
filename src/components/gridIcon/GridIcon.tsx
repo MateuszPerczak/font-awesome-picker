@@ -11,13 +11,15 @@ const GridIcon: FC<GridIconProps> = ({
   name,
   style,
   unicode,
+  ...rest
 }: GridIconProps): JSX.Element => {
   return (
     <StyledGridIcon
       animate={{ opacity: 1 }}
       initial={{ opacity: 0 }}
       exit={{ opacity: 0 }}
-      transition={{ duration: 0.4 }}
+      transition={{ duration: 0.2 }}
+      {...rest}
     >
       <StyledGridIconPoint font={style}>{unicode}</StyledGridIconPoint>
       <StyledGridIconName>{capitalize(name)}</StyledGridIconName>

@@ -16,7 +16,7 @@ export const StyledIconsGridHeader = styled.header`
   padding: 10px;
 `;
 
-export const StyledIconsGridView = styled(motion.section)`
+export const StyledIconsGridView = styled.section`
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
   gap: 10px;

@@ -33,7 +33,8 @@ export const useLoader = (elements: Icons): UseLoader => {
 
   useEffect(() => {
     setLoadedLimit(250);
-  }, [elements.length]);
+    setHasMore(elements.length > loadedLimit);
+  }, [elements]);
 
   const loadedElements: Icons = elements.slice(0, loadedLimit);
 
