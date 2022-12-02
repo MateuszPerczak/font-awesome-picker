@@ -53,7 +53,8 @@ const IconsGrid: FC<IconsGridProps> = ({
           <IconModal
             layoutId={selectedIcon.name}
             icon={selectedIcon}
-            onClick={(): void => setSelectedIcon(null)}
+            style={style}
+            onClose={(): void => setSelectedIcon(null)}
           />
         )}
       </AnimatePresence>

@@ -1,6 +1,8 @@
 import styled from "@emotion/styled";
 import { motion } from "framer-motion";
 
+import type { Styles } from "../../assets/icons/icons.types";
+
 const StyledGridIcon = styled(motion.div)`
   display: flex;
   flex-direction: column;
@@ -16,9 +18,9 @@ const StyledGridIcon = styled(motion.div)`
   }
 `;
 
-export const StyledGridIconPoint = styled.span<{ font: string }>`
+export const StyledGridIconPoint = styled.span<{ font: Styles }>`
   font-size: 3rem;
-  font-family: ${({ font }): string => font};
+  font-family: ${({ font }): Styles => font};
 `;
 
 export const StyledGridIconName = styled.span`

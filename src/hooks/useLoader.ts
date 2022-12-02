@@ -8,7 +8,7 @@ type UseLoader = {
 };
 
 export const useLoader = (elements: Icons): UseLoader => {
-  const [loadedLimit, setLoadedLimit] = useState<number>(250);
+  const [loadedLimit, setLoadedLimit] = useState<number>(0);
   const [hasMore, setHasMore] = useState<boolean>(true);
 
   const observer = useRef<IntersectionObserver | null>(null);
@@ -19,7 +19,7 @@ export const useLoader = (elements: Icons): UseLoader => {
       }
       observer.current = new IntersectionObserver((entries) => {
         if (entries[0].isIntersecting && hasMore) {
-          setLoadedLimit((prevLimit) => prevLimit + 250);
+          setLoadedLimit((prevLimit) => prevLimit + 50);
           setHasMore(elements.length > loadedLimit);
         }
       });
@@ -32,7 +32,7 @@ export const useLoader = (elements: Icons): UseLoader => {
   );
 
   useEffect(() => {
-    setLoadedLimit(250);
+    setLoadedLimit(100);
     setHasMore(elements.length > loadedLimit);
   }, [elements]);
 
