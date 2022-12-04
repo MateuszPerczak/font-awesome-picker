@@ -13,6 +13,7 @@ const StyledGridIcon = styled(motion.div)`
   aspect-ratio: 1;
   border-radius: 8px;
   transition: background-color 200ms;
+  cursor: pointer;
   &:hover {
     background-color: ${({ theme: { nav } }): string => nav};
   }

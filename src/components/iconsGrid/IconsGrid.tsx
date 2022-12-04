@@ -4,8 +4,8 @@ import IconModal from "@components/iconModal/IconModal";
 import Loader from "@components/loader/Loader";
 import useIcons from "@hooks/useIcons";
 import { useLoader } from "@hooks/useLoader";
-import { AnimatePresence, AnimateSharedLayout, motion } from "framer-motion";
-import { FC, useState } from "react";
+import { AnimatePresence } from "framer-motion";
+import { FC, useMemo, useState } from "react";
 
 import type { Icon } from "../../assets/icons/icons.types";
 import StyledIconsGrid, {
@@ -18,8 +18,9 @@ const IconsGrid: FC<IconsGridProps> = ({
   search,
   style,
 }: IconsGridProps): JSX.Element => {
-  const { useFilter } = useIcons();
-  const filteredIcons = useFilter({ search, style });
+  const { filter } = useIcons();
+
+  const filteredIcons = useMemo(() => filter({ search, style }), [search, style]);
   const { lastElementRef, loadedElements } = useLoader(filteredIcons);
   const [selectedIcon, setSelectedIcon] = useState<Icon | null>(null);
 

@@ -23,18 +23,18 @@ const StyledIconModal = styled(motion.div)`
   border-radius: 8px;
   padding: 20px;
   pointer-events: auto;
-  width: clamp(200px, 80%, 800px);
+  width: clamp(200px, 70vw, 700px);
   aspect-ratio: 3 / 2;
   z-index: 2;
 `;
 
-export const StyledIconModalPoint = styled.span<{ font: Styles }>`
+export const StyledIconModalPoint = styled.span<{ font: Styles; name: string }>`
   display: flex;
   align-items: center;
   justify-content: center;
   flex: 1 1 50%;
   padding: 10px;
-  font-size: 8rem;
+  font-size: clamp(1rem, 20vw, 14rem);
   font-family: ${({ font }): Styles => font};
 `;
 
@@ -42,7 +42,7 @@ export const StyledIconModalHeader = styled.div`
   display: flex;
   align-items: center;
   justify-content: space-between;
-  font-size: 1.1rem;
+  font-size: clamp(0.8rem, 2vw, 1rem);
 `;
 
 export const StyledIconModalContent = styled.div`

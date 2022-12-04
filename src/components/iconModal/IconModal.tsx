@@ -1,4 +1,5 @@
 import Button from "@components/button/Button";
+import StylesModal from "@components/stylesModal/StylesModal";
 import { faTimes } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { capitalize } from "lodash";
@@ -34,13 +35,11 @@ const IconModal: FC<IconModalProps> = ({
           </Button>
         </StyledIconModalHeader>
         <StyledIconModalContent>
-          <StyledIconModalPoint font={initialStyle}>{icon.unicode}</StyledIconModalPoint>
+          <StyledIconModalPoint font={initialStyle} name={icon.name}>
+            {icon.unicode}
+          </StyledIconModalPoint>
           <StyledIconModalData>
-            <p>
-              {icon.styles.map((iconStyle, index) => (
-                <span key={`icon-style-${index}`}>{iconStyle}</span>
-              ))}
-            </p>
+            <StylesModal styles={icon.styles} />
           </StyledIconModalData>
         </StyledIconModalContent>
       </StyledIconModal>
