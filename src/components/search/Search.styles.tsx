@@ -1,6 +1,7 @@
 import styled from "@emotion/styled";
+import { motion } from "framer-motion";
 
-const StyledSearch = styled.div`
+const StyledSearch = styled(motion.div)`
   display: flex;
   align-items: center;
   gap: 10px;

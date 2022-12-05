@@ -21,7 +21,7 @@ const Search: FC<SearchProps> = ({ setSearch }: SearchProps): JSX.Element => {
   };
 
   return (
-    <StyledSearch>
+    <StyledSearch layout="preserve-aspect">
       <StyledSearchInput onKeyDown={handleKeyDown} ref={inputRef} />
       <StyledSearchButton onClick={updateSearchValue}>
         <FontAwesomeIcon icon={faSearch} />
