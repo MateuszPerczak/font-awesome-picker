@@ -7,4 +7,4 @@ export type Icon = {
 
 export type Icons = Icon[];
 
-export type Styles = "Solid" | "Regular" | "Light" | "Thin" | "Duotone" | "Brands";
+export type Styles = "Solid" | "Regular" | "Light" | "Thin" | "Brands";

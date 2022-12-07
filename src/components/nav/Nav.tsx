@@ -25,9 +25,7 @@ const Nav: FC<NavProps> = ({ setSearch, setStyle, style }: NavProps): JSX.Elemen
           <ComboBox
             value={style}
             setValue={setStyle}
-            options={
-              ["Regular", "Thin", "Light", "Solid", "Duotone", "Brands"] as Styles[]
-            }
+            options={["Regular", "Thin", "Light", "Solid", "Brands"] as Styles[]}
           />
         </StyledNavChildren>
       </StyledNavWrapper>

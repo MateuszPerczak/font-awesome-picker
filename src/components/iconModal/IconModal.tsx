@@ -1,4 +1,5 @@
 import Button from "@components/button/Button";
+import PointModal from "@components/pointModal/PointModal";
 import StylesModal from "@components/stylesModal/StylesModal";
 import { faTimes } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -40,6 +41,7 @@ const IconModal: FC<IconModalProps> = ({
           </StyledIconModalPoint>
           <StyledIconModalData>
             <StylesModal styles={icon.styles} />
+            <PointModal point={icon.unicode} />
           </StyledIconModalData>
         </StyledIconModalContent>
       </StyledIconModal>
