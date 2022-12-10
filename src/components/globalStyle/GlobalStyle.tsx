@@ -4,7 +4,6 @@ import type { FC } from "react";
 import { memo } from "react";
 
 import faBrands from "../../assets/fonts/faBrands.ttf";
-import faDuotone from "../../assets/fonts/faDuotone.ttf";
 import faLight from "../../assets/fonts/faLight.ttf";
 import faRegular from "../../assets/fonts/faRegular.ttf";
 import faSolid from "../../assets/fonts/faSolid.ttf";
@@ -64,10 +63,6 @@ const GlobalStyle: FC = (): JSX.Element => {
         @font-face {
           font-family: "Solid";
           src: url(${faSolid}) format("truetype");
-        }
-        @font-face {
-          font-family: "Duotone";
-          src: url(${faDuotone}) format("truetype");
         }
         @font-face {
           font-family: "Thin";

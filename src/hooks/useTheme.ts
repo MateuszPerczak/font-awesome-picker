@@ -4,7 +4,7 @@ import themes, { ColorThemes, Theme } from "../theme/themes";
 
 const useTheme = (): Theme => {
   const systemTheme: ColorThemes = useSystemTheme(ColorThemes.Dark);
-  return themes["light"];
+  return themes[systemTheme];
 };
 
 export default useTheme;
